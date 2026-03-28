@@ -49,3 +49,61 @@
 .mock-card .mock-bar-row {
     grid-template-columns: 60px 1fr;
 }
+
+/* ------------------------------------------------------------------ */
+/* Demo modal                                                          */
+/* ------------------------------------------------------------------ */
+
+.demo-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-modal-overlay.is-open {
+    display: flex;
+}
+
+.demo-modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 860px;
+    background: var(--ink);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.demo-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.25rem 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.demo-modal-close:hover { opacity: 1; }
+
+.demo-modal-video {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.demo-modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
