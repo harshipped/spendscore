@@ -1,54 +1,180 @@
 /* ------------------------------------------------------------------ */
+/* Hero — stacked/centered layout to match design mockup              */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    padding: 4.5rem 2rem 4rem;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.75rem;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b9c78;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4b9c78;
+    flex-shrink: 0;
+}
+
+.hero-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero-title-accent {
+    font-style: normal;
+    color: #4b9c78;
+}
+
+.hero-subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    justify-content: center;
+}
+
+.hero .btn-ghost {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+}
+
+.hero .btn-ghost:hover {
+    background: var(--accent);
+}
+
+.hero-visual {
+    width: 100%;
+    display: block;
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero mock card — outer container                                    */
+/* ------------------------------------------------------------------ */
+
+.hero .mock-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 100%;
+    padding: 1.75rem;
+}
+
+.mock-card-dots {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.mock-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.mock-dot-red { background: #e39997; }
+.mock-dot-yellow { background: #f2c981; }
+.mock-dot-green { background: #addfcc; }
+
+/* ------------------------------------------------------------------ */
 /* Hero mock card — stat boxes                                         */
 /* ------------------------------------------------------------------ */
 
 .mock-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border-soft);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .mock-stat {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.4rem;
+    text-align: left;
 }
 
 .mock-stat-label {
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: var(--ink-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #999999;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 .mock-stat-value {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.5rem;
     color: var(--ink);
     line-height: 1.2;
 }
 
 .mock-stat-delta {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     color: var(--ink-faint);
 }
 
 .mock-stat-delta.positive {
-    color: var(--accent);
+    color: #4b9c78;
+    font-weight: 500;
+}
+
+.mock-stat-delta.negative {
+    color: #d15650;
     font-weight: 500;
 }
 
 /* ------------------------------------------------------------------ */
-/* Hero mock card — bar rows (simplified, no amount column)           */
+/* Hero mock card — bars panel (simplified, no amount column)          */
 /* ------------------------------------------------------------------ */
+
+.mock-bars {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    gap: 0.9rem;
+}
 
 .mock-card .mock-bar-row {
     grid-template-columns: 60px 1fr;
 }
+
+.mock-cat {
+    text-align: left;
+}
+
+.mock-bar-food { background: #e4a345; }
+.mock-bar-travel { background: #4e88d7; }
+.mock-bar-bills { background: #7e77d7; }
 
 /* ------------------------------------------------------------------ */
 /* Demo modal                                                          */
