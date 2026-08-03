@@ -1,0 +1,2 @@
+## Python environment
+This project uses a venv at `venv/`. Bash tool calls don't persist state between invocations — always call `venv/Scripts/python.exe` directly (not `python`) for any Python or pip commands.
